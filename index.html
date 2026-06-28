@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATS Resume Analyzer</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+<!-- IMPORTANT: PDF WORKER FIX -->
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+</script>
+
+<!-- Mammoth (DOCX reader) -->
+<script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<a href="https://digitalheroesco.com" target="_blank">
+  <button id="digitalHeroesBtn">Built for Digital Heroes</button>
+</a>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ATS Resume Analyzer</div>
+
+  <div class="header-buttons">
+    <button id="themeBtn">🌙 Dark Mode</button>
+    <button id="downloadPDF">Download Report</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+
+    <div class="card">
+      <h2>Upload Resume</h2>
+      <input type="file" id="resumeFile" accept=".txt,.pdf,.docx">
+      <small style="color:red;">Supported: TXT / PDF / DOCX</small>
+    </div>
+
+    <div class="card">
+      <h2>Paste Resume</h2>
+      <textarea id="resumeText" placeholder="Paste resume here..."></textarea>
+    </div>
+
+    <div class="card">
+      <h2>Job Description</h2>
+      <textarea id="jobDescription" placeholder="Paste Job Description here..."></textarea>
+
+      <button id="analyzeBtn">Analyze Resume</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+
+    <div class="dashboard">
+
+      <div class="score-card">
+        <div class="circle">
+          <svg>
+            <circle cx="80" cy="80" r="70"></circle>
+            <circle id="progressCircle" cx="80" cy="80" r="70"></circle>
+          </svg>
+          <div id="scoreText">0%</div>
+        </div>
+        <h2>ATS Score</h2>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <h3>Resume Strength</h3>
+          <div class="progress">
+            <div id="strengthBar" class="bar"></div>
+          </div>
+          <span id="strengthValue">0%</span>
+        </div>
+
+        <div class="stat-card">
+          <h3>Resume Completeness</h3>
+          <div class="progress">
+            <div id="completeBar" class="bar"></div>
+          </div>
+          <span id="completeValue">0%</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="grid">
+
+      <div class="card">
+        <h2>Matched Skills</h2>
+        <ul id="matchedSkills"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Missing Skills</h2>
+        <ul id="missingSkills"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <ul id="technicalSkills"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Soft Skills</h2>
+        <ul id="softSkills"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Formatting Analysis</h2>
+        <ul id="formatAnalysis"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Keyword Density</h2>
+        <canvas id="keywordChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h2>Grammar Suggestions</h2>
+        <ul id="grammarSuggestions"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Improvement Suggestions</h2>
+        <ul id="suggestions"></ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MAIN SCRIPT -->
+<script src="js/script.js"></script>
+
+
+<footer style="text-align:center; margin-top:40px; padding:20px;">
+  <p>Built by: Vikas P </p>
+  <p>Email:vikas782428@gmail.com</p>
+</footer>
+
+</body>
+</html>
+

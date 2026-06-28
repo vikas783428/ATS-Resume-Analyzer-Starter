@@ -1,0 +1,287 @@
+/* ================================
+   ATS Resume Analyzer
+   style.css
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#222;
+    transition:.3s;
+}
+
+body.dark{
+    background:#121212;
+    color:#fff;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#2563eb;
+    color:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.header-buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+#themeBtn{
+    background:#111827;
+    color:white;
+}
+
+#downloadPDF{
+    background:#16a34a;
+    color:white;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:25px;
+    padding:30px;
+}
+
+.left-panel{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.right-panel{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+body.dark .card{
+    background:#1f2937;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#2563eb;
+    font-size:20px;
+}
+
+textarea{
+    width:100%;
+    min-height:180px;
+    resize:vertical;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+}
+
+input[type=file]{
+    width:100%;
+    padding:12px;
+}
+
+#analyzeBtn{
+    width:100%;
+    margin-top:15px;
+    background:#2563eb;
+    color:white;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:20px;
+}
+
+.score-card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+body.dark .score-card{
+    background:#1f2937;
+}
+
+.circle{
+    width:180px;
+    height:180px;
+    margin:auto;
+    position:relative;
+}
+
+.circle svg{
+    width:180px;
+    height:180px;
+    transform:rotate(-90deg);
+}
+
+.circle circle{
+    fill:none;
+    stroke-width:12;
+}
+
+.circle circle:first-child{
+    stroke:#ddd;
+}
+
+#progressCircle{
+    stroke:#2563eb;
+    stroke-dasharray:440;
+    stroke-dashoffset:440;
+    transition:1s;
+}
+
+#scoreText{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:30px;
+    font-weight:bold;
+}
+
+.stats{
+    display:grid;
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+body.dark .stat-card{
+    background:#1f2937;
+}
+
+.progress{
+    width:100%;
+    height:14px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin:12px 0;
+}
+
+.bar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#22c55e);
+    transition:1s;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    background:#f5f5f5;
+}
+
+body.dark ul li{
+    background:#374151;
+}
+
+.download{
+    text-align:center;
+}
+
+#downloadResume{
+    background:#f97316;
+    color:white;
+    padding:15px 30px;
+}
+
+canvas{
+    width:100%!important;
+    height:250px!important;
+}
+
+@media(max-width:1100px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.dashboard{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.header-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+#keywordChart {
+  width: 100% !important;
+  height: 250px !important;
+}
+}

@@ -1,0 +1,163 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#ffffff;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+/* Hero Content */
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* Digital Heroes Button */
+
+.hero-top-btn{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-bottom:30px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.hero-top-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+
+/* Heading */
+
+.hero h1{
+
+    font-size:54px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+/* Description */
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+    max-width:750px;
+
+    margin:0 auto;
+
+}
+
+/* Upload Button */
+
+.hero-btn{
+
+    margin-top:40px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.25);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero{
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#ffffff;
+    padding:60px 20px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-btn{
+
+width:100%;
+
+max-width:300px;
+
+}
+
+}
